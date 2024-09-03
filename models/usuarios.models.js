@@ -12,6 +12,7 @@ const leerUsuario = (id)=>{
 const crearUsuario = (usuario)=>{
     usuario.id = ++idUsuario
     usuarios.push(usuario) 
+    return usuario
 }
 const editUsuario = (id, usuarioEditado)=>{
     usuarioEditado.id = id

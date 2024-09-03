@@ -14,10 +14,11 @@ const getOne = (req, res) => {
   }
 
 const createUsuario = (req, res)=>{
-    console.log(req.body) // Para resibir información por el cuerpo de la petición
+    console.log(req.body) // Para recibir información por el cuerpo de la petición
     const usuario = req.body // A este objeto le agrego una id
     const crearUsuario = models.crearUsuario(usuario)
-    res.status(201).json(crearUsuario)
+    //res.status(201).json(crearUsuario)
+    res.status(201).redirect('/api/usuarios/')
   }
 const editarUsuario = (req, res)=>{ 
     const id = req.params.id
