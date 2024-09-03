@@ -6,16 +6,15 @@ const getAll = (req, res) => {
   }
 
 const getOne = (req, res) => { 
-    console.log(req.params.id) // Un objeto que tiene adentro el id
-    const id = req.params.id // Devuelve un string, por lo que no se puede poner ===, solo ==
-    // Hay que avisarle al cliente que quiero que se responda con un status 200
+    console.log(req.params.id)
+    const id = req.params.id 
     const usuario = models.leerUsuario(id)
     res.status(200).json(usuario)
   }
 
 const createUsuario = (req, res)=>{
-    console.log(req.body) // Para recibir información por el cuerpo de la petición
-    const usuario = req.body // A este objeto le agrego una id
+    console.log(req.body) 
+    const usuario = req.body
     const crearUsuario = models.crearUsuario(usuario)
     res.status(201).json(crearUsuario)
     
